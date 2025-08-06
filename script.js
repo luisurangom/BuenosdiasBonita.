@@ -22,7 +22,7 @@ function crearFrase() {
 
   setTimeout(() => {
     frase.remove();
-  }, 5000); // duración de la animación
+  }, 5000);
 }
 
-setInterval(crearFrase, 1000); // Frases aparecen más rápido
+setInterval(crearFrase, 1000);
