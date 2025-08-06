@@ -1,35 +1,28 @@
 const frases = [
-  "💖 Eres luz donde hay oscuridad.",
-  "🌈 Tu sonrisa ilumina el día.",
-  "✨ Cada día es mejor contigo.",
-  "🌸 Hoy será un gran día.",
-  "🌟 Eres una estrella brillante.",
-  "💪 Puedes con todo, confía.",
-  "🦋 Tu energía es mágica.",
-  "💫 El mundo es mejor contigo.",
-  "🌷 Eres arte puro.",
-  "🩷 Siempre brillas fuerte.",
-  "💐 Hoy mereces lo más bonito.",
-  "🌞 Tu alma es sol y alegría.",
-  "🎀 Nunca dejes de soñar."
+  "✨ Hoy es un buen día para sonreír.",
+  "🌸 Eres luz, nunca lo olvides.",
+  "💖 Lo que haces con amor, brilla más.",
+  "🌞 Tu energía alegra todo a tu alrededor.",
+  "🌷 Nunca dejes de creer en ti.",
+  "🦋 Eres un alma hermosa.",
+  "🎀 Hoy mereces todo lo bonito del mundo.",
+  "🌼 Gracias por existir."
 ];
 
-// Crear una nueva burbuja con una frase
-function crearBurbuja() {
-  const burbuja = document.createElement("div");
-  burbuja.className = "burbuja";
-  burbuja.textContent = frases[Math.floor(Math.random() * frases.length)];
+function crearFrase() {
+  const contenedor = document.getElementById("contenedor-frases");
+  const frase = document.createElement("div");
+  frase.classList.add("frase");
+  frase.innerText = frases[Math.floor(Math.random() * frases.length)];
 
-  // Posición horizontal aleatoria
-  burbuja.style.left = Math.random() * 90 + "%";
+  frase.style.left = Math.random() * 90 + "vw";
+  frase.style.top = "100vh";
 
-  document.body.appendChild(burbuja);
+  contenedor.appendChild(frase);
 
-  // Eliminar burbuja después de animación
   setTimeout(() => {
-    burbuja.remove();
-  }, 5000);
+    frase.remove();
+  }, 5000); // duración de la animación
 }
 
-// Generar burbujas cada 800 ms (más rápido)
-setInterval(crearBurbuja, 800);
+setInterval(crearFrase, 1000); // Frases aparecen más rápido
