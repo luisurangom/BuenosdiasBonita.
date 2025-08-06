@@ -4,9 +4,10 @@ const frases = [
   "💖 Lo que haces con amor, brilla más.",
   "🌞 Tu energía alegra todo a tu alrededor.",
   "🌷 Nunca dejes de creer en ti.",
-  "🦋 Eres un alma hermosa.",
+  "🦋 Eres hermosa sipote bollito oyo joa.",
+  "🌷 Eres arte puro.",
   "🎀 Hoy mereces todo lo bonito del mundo.",
-  "🌼 Gracias por existir."
+  "🌼 Gracias a Dios por semejante Creación."
 ];
 
 function crearFrase() {
