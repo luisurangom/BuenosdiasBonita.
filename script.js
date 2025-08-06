@@ -16,8 +16,8 @@ function crearBurbuja() {
   burbuja.textContent = frases[Math.floor(Math.random() * frases.length)];
 
   const contenedor = document.getElementById("contenedor-frases");
-  const tamaño = Math.random() * 20 + 14; // Tamaño entre 14px y 34px
-  const left = Math.random() * 100; // Porcentaje
+  const tamaño = Math.random() * 20 + 14;
+  const left = Math.random() * 100;
 
   burbuja.style.fontSize = `${tamaño}px`;
   burbuja.style.left = `${left}vw`;
@@ -26,8 +26,8 @@ function crearBurbuja() {
 
   setTimeout(() => {
     burbuja.remove();
-  }, 6000);
+  }, 5000); // Burbuja desaparece tras 5 segundos
 }
 
-// Crear una burbuja cada 2 segundos
-setInterval(crearBurbuja, 2000);
+// 💨 Frecuencia más rápida: cada 1 segundo
+setInterval(crearBurbuja, 1000);
