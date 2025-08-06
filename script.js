@@ -1,41 +1,33 @@
 const frases = [
-  "Eres una mujer maravillosa 🌸",
-  "Hoy será un gran día ✨",
-  "Tu sonrisa ilumina todo 💖",
-  "Nunca dejes de soñar 🌈",
-  "Confía en ti, lo estás haciendo bien 💪",
-  "Cada paso te acerca a tus metas 🚀",
-  "Tu energía es hermosa 🌞",
-  "Eres más fuerte de lo que crees 💎"
+  "¡Buenos días, hermosa!",
+  "Hoy es un gran día para sonreír 💖",
+  "Eres más fuerte de lo que crees",
+  "Tu luz ilumina a todos 🌟",
+  "Confía en ti, bonita 🌈",
+  "Hoy es tu día para brillar ✨",
+  "Nada puede detenerte",
+  "Tu sonrisa cambia el mundo 😊",
+  "Eres magia pura 💫"
 ];
 
-function crearBurbuja(frase) {
+function crearBurbuja() {
   const burbuja = document.createElement("div");
   burbuja.className = "burbuja";
-  burbuja.textContent = frase;
+  burbuja.textContent = frases[Math.floor(Math.random() * frases.length)];
 
-  // Posición aleatoria horizontal
-  const left = Math.random() * 90;
-  burbuja.style.left = `${left}%`;
+  const contenedor = document.getElementById("contenedor-frases");
+  const tamaño = Math.random() * 20 + 14; // Tamaño entre 14px y 34px
+  const left = Math.random() * 100; // Porcentaje
 
-  // Retardo de animación para que no salgan todas al mismo tiempo
-  const delay = Math.random() * 5;
-  burbuja.style.animationDelay = `${delay}s`;
+  burbuja.style.fontSize = `${tamaño}px`;
+  burbuja.style.left = `${left}vw`;
 
-  // Agregar al contenedor
-  document.getElementById("contenedor-frases").appendChild(burbuja);
+  contenedor.appendChild(burbuja);
 
-  // Eliminar burbuja después de 12s
   setTimeout(() => {
     burbuja.remove();
-  }, 12000);
+  }, 6000);
 }
 
-// Crear nuevas burbujas cada 3 segundos
-setInterval(() => {
-  const frase = frases[Math.floor(Math.random() * frases.length)];
-  crearBurbuja(frase);
-}, 3000);
-
-// Cargar una burbuja al inicio
-crearBurbuja(frases[0]);
+// Crear una burbuja cada 2 segundos
+setInterval(crearBurbuja, 2000);
