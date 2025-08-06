@@ -2,62 +2,54 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: linear-gradient(to bottom right, #fff5f7, #e3f2fd); /* Fondo claro */
+  background: linear-gradient(to top right, #fef6ff, #e3d5ec);
   overflow: hidden;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  position: relative;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* ☁️ Nube central */
 #nube {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffffcc;
-  padding: 30px 35px;
-  border-radius: 100px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-  border: 2px dashed #c29ff0;
-  z-index: 2;
+  background: #ffffffdd;
+  border-radius: 50px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-  width: 75%;
-  max-width: 700px;
+  z-index: 2;
 }
 
 #nube p {
-  font-size: 1.3rem; /* Tamaño más pequeño */
+  font-size: 1rem; /* Texto más pequeño */
   font-weight: bold;
   color: #7b1fa2;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* 🌸 Burbujas flotantes */
-.burbuja {
+.frase {
   position: absolute;
-  bottom: 0;
-  color: #fff;
-  background: rgba(186, 104, 200, 0.8); /* Color visible */
-  padding: 8px 18px;
-  border-radius: 50px;
+  color: #6a1b9a;
+  font-size: 0.9rem;
+  opacity: 0.8;
   animation: flotar 5s linear forwards;
-  white-space: nowrap;
-  font-weight: bold;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-  z-index: 1;
+  pointer-events: none;
 }
 
 @keyframes flotar {
   0% {
-    transform: translateY(100vh) scale(0.5);
+    transform: translateY(0);
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
+  80% {
+    opacity: 1;
+  }
   100% {
-    transform: translateY(-10vh) scale(1);
+    transform: translateY(-100vh);
     opacity: 0;
   }
 }
