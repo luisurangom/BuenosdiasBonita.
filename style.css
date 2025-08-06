@@ -1,28 +1,41 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to top right, #ffdde1, #ee9ca7);
-  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ffe6f0, #e6ccff);
   overflow: hidden;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  position: relative;
 }
 
-#contenedor-frases {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+#mensaje-central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #800080;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 
 .burbuja {
   position: absolute;
+  bottom: 0;
+  color: white;
+  background: rgba(255, 105, 180, 0.7);
   padding: 10px 20px;
-  border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  animation: flotar 6s ease-in-out forwards;
-  opacity: 0;
-  font-size: 1rem;
-  color: #444;
-  pointer-events: none;
+  border-radius: 50px;
+  animation: flotar 5s linear forwards;
+  white-space: nowrap;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 @keyframes flotar {
