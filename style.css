@@ -2,49 +2,49 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: linear-gradient(to bottom right, #ffe6f0, #e6ccff);
+  background: linear-gradient(to bottom right, #fff5f7, #e3f2fd); /* Fondo claro */
   overflow: hidden;
   font-family: "Comic Sans MS", cursive, sans-serif;
   position: relative;
 }
 
-/* ☁️ Nube central bonita */
+/* ☁️ Nube central */
 #nube {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #ffffffcc;
-  padding: 35px 40px;
+  padding: 30px 35px;
   border-radius: 100px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-  border: 3px dashed #d39fe9;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  border: 2px dashed #c29ff0;
   z-index: 2;
   text-align: center;
-  width: 70%;
+  width: 75%;
   max-width: 700px;
 }
 
 #nube p {
-  font-size: 1.6rem;
+  font-size: 1.3rem; /* Tamaño más pequeño */
   font-weight: bold;
-  color: #8a2be2;
+  color: #7b1fa2;
   margin: 0;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 /* 🌸 Burbujas flotantes */
 .burbuja {
   position: absolute;
   bottom: 0;
-  color: white;
-  background: rgba(255, 105, 180, 0.7);
-  padding: 10px 20px;
+  color: #fff;
+  background: rgba(186, 104, 200, 0.8); /* Color visible */
+  padding: 8px 18px;
   border-radius: 50px;
   animation: flotar 5s linear forwards;
   white-space: nowrap;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
 
