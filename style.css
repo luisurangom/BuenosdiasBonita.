@@ -8,22 +8,32 @@ body {
   position: relative;
 }
 
-#mensaje-central {
+/* ☁️ Nube central bonita */
+#nube {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #800080;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  background: #ffffffcc;
+  padding: 35px 40px;
+  border-radius: 100px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  border: 3px dashed #d39fe9;
   z-index: 2;
+  text-align: center;
+  width: 70%;
+  max-width: 700px;
 }
 
+#nube p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #8a2be2;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* 🌸 Burbujas flotantes */
 .burbuja {
   position: absolute;
   bottom: 0;
