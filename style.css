@@ -1,30 +1,40 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #ffc0cb, #ffe4e1);
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  height: 100vh;
   overflow: hidden;
+  background: linear-gradient(to top right, #ffe6f0, #e0f7ff);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-.contenedor {
-  margin-top: 20vh;
+#contenedor-frases {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 2.5em;
-  color: #b22222;
+.burbuja {
+  position: absolute;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #ff69b4;
+  border-radius: 25px;
+  animation: flotar 10s linear infinite;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  color: #e91e63;
+  white-space: nowrap;
 }
 
-.frase {
-  font-size: 1.5em;
-  margin-top: 20px;
-  color: #444;
-  animation: aparecer 3s ease-in-out infinite;
-}
-
-@keyframes aparecer {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
 }
